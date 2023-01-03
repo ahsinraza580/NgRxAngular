@@ -1,5 +1,5 @@
 import {createReducer, on} from "@ngrx/store";
-import {customIncrement, decrement, increment, reset} from "./counter.actions";
+import {ChangeText, customIncrement, decrement, increment, reset} from "./counter.actions";
 
 
 import {initialState} from "./counter.state"
@@ -30,6 +30,12 @@ const _counterReducer = createReducer(
     return{
       ...state,
       counter:state.counter + action.value
+    }
+  }),
+  on(ChangeText,(state)=>{
+    return{
+      ...state,
+      Company:'Arbisoft'
     }
   })
 );

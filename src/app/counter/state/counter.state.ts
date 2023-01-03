@@ -1,7 +1,9 @@
 export interface counterState{
-  counter:number
+  counter:number;
+  Company:string
 }
 
 export const initialState :counterState = {
-  counter:0
+  counter:0,
+  Company:'PieCyfer'
 }

@@ -8,3 +8,5 @@ export const reset = createAction('reset');
 export const customIncrement = createAction(
   'custom',
   props<{value:number}>())
+
+export const ChangeText = createAction('Company')

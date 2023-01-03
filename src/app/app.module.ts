@@ -9,13 +9,15 @@ import { CounterOutputComponent } from './counter/counter-output/counter-output.
 import {StoreModule} from "@ngrx/store";
 import {counterReducer} from "./counter/state/counter.reducer";
 import { CustomCounterInputComponent } from './counter/custom-counter-input/custom-counter-input.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { PostsListComponent } from './posts/posts-list/posts-list.component';
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {environment} from 'src/environments/enviroment'
 import {appReducer} from "./store/app.state";
+import { AddpostComponent } from './posts/addpost/addpost.component';
+import { EditPostComponent } from './posts/edit-post/edit-post.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +28,14 @@ import {appReducer} from "./store/app.state";
     CustomCounterInputComponent,
     HomeComponent,
     HeaderComponent,
-    PostsListComponent
+    PostsListComponent,
+    AddpostComponent,
+    EditPostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     StoreModule.forRoot(appReducer),
     StoreDevtoolsModule.instrument({
       logOnly: environment.production, // Restrict extension to log-only mode

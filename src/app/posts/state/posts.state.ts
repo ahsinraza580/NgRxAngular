@@ -20,6 +20,16 @@ export const initialState:PostsState = {
       id:'3',
       title:'Sample Title 3',
       description:'Sample Description 3'
+    },
+    {
+      id:'4',
+      title:'Sample Title 4',
+      description:'Sample Description 4'
+    },
+    {
+      id:'5',
+      title:'Sample Title 5',
+      description:'Sample Description 5'
     }
   ]
 }
